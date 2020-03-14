@@ -1,4 +1,5 @@
 default_context:
+    # cookiecutter-python-app
     project_slug: joplin_db
     project_url: "https://github.com/NGenetzky/joplin_db"
     app_name: '{{ cookiecutter.project_slug }}'
@@ -7,3 +8,10 @@ default_context:
     author_email: "nathan@genetzky.us"
     project_version: 0.1.0.dev0
     sphinx_theme: alabaster
+
+    # cookiecutter-Flask-Foundation
+    full_name: "Nathan Genetzky"
+    email: "nathan@genetzky.us"
+    repo_name: 'joplin_db'
+    app_title: 'joplin_db'
+    version: 0.1.0.dev0
