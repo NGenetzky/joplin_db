@@ -1,3 +1,0 @@
-[submodule "cookiecutter-python-app"]
-	path = cookiecutter-python-app
-	url = https://github.com/mdklatt/cookiecutter-python-app
