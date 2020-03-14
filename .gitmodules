@@ -1,6 +1,0 @@
-[submodule "cookiecutter-python-app"]
-	path = cookiecutter-python-app
-	url = https://github.com/mdklatt/cookiecutter-python-app
-[submodule "cookiecutter-Flask-Foundation"]
-	path = cookiecutter-Flask-Foundation
-	url = https://github.com/JackStouffer/cookiecutter-Flask-Foundation.git
