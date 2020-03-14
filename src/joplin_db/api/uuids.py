@@ -18,12 +18,14 @@ def main(data) -> str:
     DBSession.bind = engine
     session = DBSession()
 
-    # Make a query to find all Persons in the database
+    uuids = []
+
+    # Make queries to find all Items in the database
     folders = session.query(Folder).all()
-
     for folder in folders:
-        print(str(folder.title))
+        uuids.append(folder.id)
 
-    folders_str = '\n'.join(str(folders))
-    logger.debug("executing uuids command")
+    logger.debug("uuids is returning {} values".format(len(uuids)))
+    folders_str = '\n'.join(sorted(uuids))
+    print(folders_str)
     return folders_str

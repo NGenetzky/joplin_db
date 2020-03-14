@@ -14,7 +14,7 @@ import pytest
 from joplin_db.cli import *  # test __all__
 
 
-@pytest.fixture(params=("hello",))
+@pytest.fixture(params=("uuids",))
 def command(request):
     """ Return the command to run.
 

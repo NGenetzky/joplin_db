@@ -1,7 +1,7 @@
 """ Application commands common to all interfaces.
 
 """
-from .hello import main as hello
+from .uuids import main as uuids
 
 
-__all__ = "hello",
+__all__ = "uuids",

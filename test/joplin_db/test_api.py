@@ -11,20 +11,12 @@ import pytest
 from joplin_db.api import *  # tests __all__
 
 
-def test_hello():
-    """ Test the hello() function.
+# def test_uuids(): # TODO
+#     """ Test the uuids() function with a directory.
 
-    """
-    assert hello() == "Hello, World!"
-    return
-
-
-def test_hello_name():
-    """ Test the hello() function with a name.
-
-    """
-    assert hello("foo") == "Hello, foo!"
-    return
+#     """
+#     assert uuids("foo") == ""
+#     return
 
 
 # Make the script executable.

@@ -5,7 +5,7 @@ from argparse import ArgumentParser
 from inspect import getfullargspec
 
 from . import __version__
-from .api import hello
+from .api import uuids
 from .core.config import config
 from .core.logger import logger
 
@@ -56,10 +56,15 @@ def _args(argv):
             help="print version and exit")
     parser.add_argument("-w", "--warn", default="WARN",
             help="logger warning level [WARN]")
+
     common = ArgumentParser(add_help=False)  # common subcommand arguments
-    common.add_argument("--name", "-n", default="World", help="greeting name")
+    common.add_argument(
+        "--data", "-d",
+        help="Directory contain joplin database and files"
+    )
+
     subparsers = parser.add_subparsers(title="subcommands")
-    _hello(subparsers, common)
+    _uuids(subparsers, common)
     args = parser.parse_args(argv)
     if not args.config:
         # Don't specify this as an argument default or else it will always be
@@ -68,14 +73,14 @@ def _args(argv):
     return args
  
 
-def _hello(subparsers, common):
-    """ CLI adaptor for the api.hello command.
+def _uuids(subparsers, common):
+    """ CLI adaptor for the api.uuids command.
 
     :param subparsers: subcommand parsers
     :param common: parser for common subcommand arguments
     """
-    parser = subparsers.add_parser("hello", parents=[common])
-    parser.set_defaults(command=hello)
+    parser = subparsers.add_parser("uuids", parents=[common])
+    parser.set_defaults(command=uuids)
     return
 
 
