@@ -3,3 +3,10 @@
 ##   pyhon -m pip install --requirement=requirements.txt
 ##
 PyYAML>=3.11
+
+Flask==0.10.1
+
+# Flask Extensions
+Flask-SQLAlchemy==2.0
+
+pytest
