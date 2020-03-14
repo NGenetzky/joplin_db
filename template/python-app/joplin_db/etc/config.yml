@@ -1,0 +1,4 @@
+## Runtime configuration for the joplin_db application.
+##
+core:
+  logging: WARN
